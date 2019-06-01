@@ -5,3 +5,9 @@ _**05/31/2019**_</br>
 _**06/01/2019**_</br>
 
 ![10,000 Ft View](./images/10K_ft_view.jpg)
+
+![Kubernetes Pod](./images/kube_pod.jpg)
+
+![Kubernetes Pod 2](./images/kube_pod_2.jpg)
+
+![Kubernetes Pod YAML](./images/kube_pod_yaml.jpg)
