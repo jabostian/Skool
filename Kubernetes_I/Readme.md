@@ -39,7 +39,7 @@ _**06/01/2019**_</br>
 
 ![Labels to group API Objects](./images/labels.jpg)
 
-- You can query for labels that map to a value, like the entire app
+- You can query (_select_) labels that map to a value, like the entire app
    - Can narrow a search for multiple labels
 - Kubernetes does health checks on pods
    - Negative or no response means a pod is unhealthy
