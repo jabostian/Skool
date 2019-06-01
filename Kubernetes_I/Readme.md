@@ -11,3 +11,10 @@ _**06/01/2019**_</br>
 ![Kubernetes Pod 2](./images/kube_pod_2.jpg)
 
 ![Kubernetes Pod YAML](./images/kube_pod_yaml.jpg)
+
+- Upload YAML to a Kubernetes Master server, and the master will deploy it on
+  one of the cluster nodes.
+- A deployment ensures that _**N**_ pods are running in a cluster at any given
+  time
+
+![Kubernetes Pod YAML 2](./images/kube_pod_yaml_2.jpg)
