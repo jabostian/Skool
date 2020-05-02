@@ -183,10 +183,13 @@ There are _more than 30_ containers running in this project, just to start a def
 environment.  Note that there are containers running for each of the pods from the
 output of the ```oc get pods -n default``` command
 
-_**05/02/2020**_
 ### Provisioning a Database Server
+_**05/02/2020**_
+
 Red Hat Container Image Catalog is the place to go for images
 - [RH Container Image Catalog](https://catalog.redhat.com/software/containers/explore)
+For some reason, the steps below fetch the mysql image from Dockerhub, and not the
+RH image catalog.
 
 Re-start the environment from the previous session
 - Make sure the myproject minishift VM is up and running
@@ -287,3 +290,7 @@ Deleted: sha256:e400f46e3f59f4bc9b374c9a855bb57386a83309c4f9c467be1ffe9d766f3262
 Deleted: sha256:c5d2332174614b707ebc0bb364f08db67f0d2f88b8403a9130227763623462d6
 Deleted: sha256:cde96efde55e96cdd5023f8d842141ade74927270ae678f99e043f637c334914
 ```
+
+
+## Chapter 3 - Managing Containers
+_**04/26/2020**_
