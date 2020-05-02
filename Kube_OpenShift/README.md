@@ -61,7 +61,7 @@ _**EDX**_
 
 
 ## Chapter 2 - Creating Containerized Services
-04/26/2020
+_**04/26/2020**_
 
 ### Building a Development environment with OpenShift
 Started an OS project cluster using all of the default settings.  This is a KVM-based
@@ -183,15 +183,20 @@ There are _more than 30_ containers running in this project, just to start a def
 environment.  Note that there are containers running for each of the pods from the
 output of the ```oc get pods -n default``` command
 
+_**05/02/2020**_
 ### Provisioning a Database Server
 Red Hat Container Image Catalog is the place to go for images
+- [RH Container Image Catalog](https://catalog.redhat.com/software/containers/explore)
 
+Re-start the environment from the previous session
 - Make sure the myproject minishift VM is up and running
    - ```minishift start```
-- Hit the OpenShift web console for this project, and log in as developer/spd95tpl
+- Point a browser at the OpenShift web console for this project, and log in as developer/spd95tpl
    - ```https://192.168.42.121:8443/console/```
 - ssh into the VM
    - ```minishift ssh```
+
+Pull and run a mysql database
 - Starting up the mysql container from the demo:
    - ```docker run --name mysql-basic -e MYSQL_USER=user1 -e MYSQL_PASSWORD=mypa55 -e MYSQL_DATABASE=items -e MYSQL_ROOT_PASSWORD=r00tpa55 -d mysql:5.6```
    - This will pull the image from Dockerhub, and not the redhat catalog as in the demo.
@@ -259,3 +264,26 @@ Red Hat Container Image Catalog is the place to go for images
 
   mysql>
   ```
+
+Clean up the VM:
+```
+[docker@minishift ~]$ docker stop mysql-basic
+mysql-basic
+[docker@minishift ~]$ docker rm mysql-basic
+mysql-basic
+[docker@minishift ~]$ docker rmi mysql:5.6
+Untagged: mysql:5.6
+Untagged: docker.io/mysql@sha256:f77b19ed0467ccb44d54550b9707aec339d61d570dd4d6f648a9d35e1310eafa
+Deleted: sha256:afa411733b0ca406f1a2b0115832c29ad45a9fed385b92e5a8afbc6f1cdddf32
+Deleted: sha256:1496fadff283c4c844be8bfb1200f51f3af2f3b16274d7d35a85fdcdd7129251
+Deleted: sha256:0f4f40005ee7558bb24c2e7e9e1c70dcc79dca00b89d5a986999ab32494553e4
+Deleted: sha256:1041dfaf369a3604e72415a26b25871621c8a7f816da5a9b9750c15af70fe2a0
+Deleted: sha256:efb35dfae3b790bd79ca422dc98eb90627dd878fe0e79ed9556c510c1398b85c
+Deleted: sha256:1f322b60da4c93bdd060593ae000cd10a0016f379df7360d1bc9229c7ea37813
+Deleted: sha256:aa19dade5f396c8e0313d8d7c6d6f83bc31e730382f09e8624407223c8d3e43d
+Deleted: sha256:a157c03abd533059ad7a7f2306fafe24162766fbd975741b84b2685c58e4aca6
+Deleted: sha256:5fd1071f6490eb947e0a4cf252dd8e889ae1d2f1aab8578c6a96bba1d9964794
+Deleted: sha256:e400f46e3f59f4bc9b374c9a855bb57386a83309c4f9c467be1ffe9d766f3262
+Deleted: sha256:c5d2332174614b707ebc0bb364f08db67f0d2f88b8403a9130227763623462d6
+Deleted: sha256:cde96efde55e96cdd5023f8d842141ade74927270ae678f99e043f637c334914
+```
