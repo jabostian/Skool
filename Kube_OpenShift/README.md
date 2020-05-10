@@ -305,3 +305,4 @@ Verbs to query Docker information
 The course has a nice explanation of [container creation](./docs/ch_3/Managing_the_Lifecycle_of_Containers.pdf)
 
 _**05/10/2020**_
+A [fuller Docker command summary](./docs/ch_3/Managing_the_Lifecycle_of_Containers_2.pdf)
