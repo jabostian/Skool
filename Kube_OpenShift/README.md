@@ -305,4 +305,24 @@ Verbs to query Docker information
 The course has a nice explanation of [container creation](./docs/ch_3/Managing_the_Lifecycle_of_Containers.pdf)
 
 _**05/10/2020**_
-A [fuller Docker command summary](./docs/ch_3/Managing_the_Lifecycle_of_Containers_2.pdf)
+<br/>
+Here is a [fuller Docker command summary](./docs/ch_3/Managing_the_Lifecycle_of_Containers_2.pdf)
+
+When a container is restarted, it's brought down, and then back up.  All of the data
+inside is preserved.
+
+The ```docker kill``` command sends signals to a running container.  Can send ```SIG_```
+signals using this command.
+
+Can also combine docker commands with shell script from the command line.  Ex:
+```
+docker rm $(docker ps -aq)
+```
+(note this brings down all containers, which we probably don't want to do in a minishift
+environment, since there are so many OpenShift containers running there)
+
+The end of this chapter runs through a nice
+[basic exercise with a mySQL container](./docs/ch_3/Guided_Exercise_Managing_a_MySQL_Container.pdf)
+
+
+## Chapter 4 - Managing Container Images
