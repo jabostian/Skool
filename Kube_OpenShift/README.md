@@ -326,3 +326,41 @@ The end of this chapter runs through a nice
 
 
 ## Chapter 4 - Managing Container Images
+Image registries:
+- docker .io
+- registry.access.redhat.com
+
+In order to push an image to a registry, it has to be in your local image cache, and
+should be tagged for naming and versioning purposes.
+
+The method for cleaning out the Docker cache from this class is the old way, which
+removes all images: ```docker rmi $(docker images -q)```.
+
+I prefer ```docker system prune -a```.
+
+You can create an _image_ from a running container using the ```docker commit```
+command instead of building a new image.  It's always preferable to have a Dockerfile
+for building an image from source, but if that isn't available, the commit path is an
+option.
+
+The ```docker diff``` command shows any files that have been changed within a container
+since it was started.  So the general workflow is to diff a given running container
+to see how it has been altered.  Once you have it the way you like, commit it to a
+new container _image_.  Note that the container has to be stopped before it can be
+committed.
+
+Once the new image is created via commit, you can tag it with the registry path, and
+version number, and then push it.
+
+There is a ```docker-registry-cli``` command to see what's on a registry:
+```
+docker-registry-cli infrastructure.lab.example.com:5000 search custom-httpd
+```
+where custom-http is the image we're searching for.
+
+Here are reviews of various Docker operations:
+- [Saving and loading](./docs/ch_4/Saving_and_Loading_Images.pdf)
+- [Publishing to a registry](./docs/ch_4/Publishing_an_Image_to_a_Registry.pdf)
+- [Deleting images](./docs/ch_4/Deleting_Images.pdf)
+- [Modifying images](./docs/ch_4/Modifying_Images.pdf)
+- [Tagging an image](./docs/ch_4/Tagging_Images.pdf)
