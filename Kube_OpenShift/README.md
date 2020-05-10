@@ -293,4 +293,13 @@ Deleted: sha256:cde96efde55e96cdd5023f8d842141ade74927270ae678f99e043f637c334914
 
 
 ## Chapter 3 - Managing Containers
-_**04/26/2020**_
+_**05/02/2020**_
+
+## Docker client verbs
+Verbs to change container state
+![docker action verbs](./images/docker_actions.png)
+
+Verbs to query Docker information
+![docker query verbs](./images/docker_queries.png)
+
+The course has a nice explanation of [container creation](./docs/ch_3/Managing_the_Livfecycle_of_Containers.pdf)
