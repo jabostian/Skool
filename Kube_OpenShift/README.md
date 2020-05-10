@@ -302,4 +302,6 @@ Verbs to change container state
 Verbs to query Docker information
 ![docker query verbs](./images/docker_queries.png)
 
-The course has a nice explanation of [container creation](./docs/ch_3/Managing_the_Livfecycle_of_Containers.pdf)
+The course has a nice explanation of [container creation](./docs/ch_3/Managing_the_Lifecycle_of_Containers.pdf)
+
+_**05/10/2020**_
