@@ -70,6 +70,23 @@
       - Takes a set of features as input
       - Performs non-linear transformations in the hidden layers
       - Outputs probabilities for each classification
+   ![Training Classifiers](./images/Training_classifiers.png)
+   - Training a classifier
+      - 2 inputs:
+         - Feature vector (X)
+         - _theta_ - weights for the nodes of the NN (a.k.a. parameters)
+            - Changes over time during learning
+            - Trying to map Features (X) to Labels(Y)
+      - Predictions are _yHat_, becaue they are guesses, not the real labels (Y) for the
+        feature set
+      - Goal: minimize the difference between _Y_ and _yHat_
+      - Cost function indicates how close _Y_ and _yHat_ are
+      - Update the parameters (theta) according to the _gradient_ of the cost function
+         - _gradient_ indicates the direction in which _theta_ needs to move
+      - Repeat this process until the cost function is sufficiently low
+
+
+
 
 
 
