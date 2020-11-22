@@ -13,8 +13,8 @@
    - May also take an input class
    - Goal: generate a set of features that look like the real class
 - Many types of generative models
-   ![VAE overview](./images/VAE_overview.png)
    - Variational AutoEncoders (VAEs)
+      ![VAE overview](./images/VAE_overview.png)
        - Works with 2 models, usually NNs
        - Encoder - represents input image in latent space
           - Location can be represented as a vector of numbers
@@ -24,8 +24,8 @@
           - Assumes Decoder has been trained well to genewrate good class members
        - Once trained, Encoder isn't needed any more.  Just use decoder to generate
          class members
-   ![GAN overview](./images/GAN_overview.png)
    - Generative Adversarial Networks (GANs)
+      ![GAN overview](./images/GAN_overview.png)
       - 2 models as well
       - Generator
          - Generator takes in noise vector as well, and an optional class member
