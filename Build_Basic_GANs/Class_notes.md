@@ -48,6 +48,31 @@
    - Generate 3D object designs
 
 
+### Intuition behind GANs
+- Generator creates fakes that appear real to fool the discriminator
+- Discriminator learns to discriminate between reall class members and fakes
+- GAN starts with a set of real members
+   - Generator isn't allowed access to the real member set
+   - Discriminator originally can't tell real from fake
+- Begin training the descriminator with a mix of real and fake
+   - 5% real
+   - 40% fake
+   - Provide labels to supervise the learning process
+- Generator learns to create better fakes by looking at member classification scores
+  from the discriminator
+- Training continues until GAN reaches the threshold of success required
+
+### The Discriminator
+- A Discriminator is a type of classifier
+   - Classifiers distinguish between different classes
+   ![Discrimnator NN](./images/Discriminator_NN_overview.png)
+   - One type of classifier model is a _neural network_
+      - Takes a set of features as input
+      - Performs non-linear transformations in the hidden layers
+      - Outputs probabilities for each classification
+
+
+
 
 
 
