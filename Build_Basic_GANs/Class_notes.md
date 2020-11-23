@@ -98,8 +98,35 @@
    - If output image has 3 million pixels, there could be 3 million output nodes, each of which
      represents a pixel value
 ![Generator Learning](./images/Generator_learning.png)
-- Generator is trying to fool the Discriminator, so it wants $hat{Y}_{d}$ to be zero (not in class)
+- Generator is trying to fool the Discriminator, so it wants $\hat{Y}_{d}$ to be zero (not in class)
   for members of the class, and one (in class) for non-members.
+- A well-trained generator models $P(Y|X)$ well
+   - If only 1 class (e.g. cat or ~cat), can eliminate the _Y_ term from the probability and have $P(X)$
+      - This is just the probability that generator will create a good feature set
+- Once you get a generator that creates good images, you can save the parameters $/theta$ of the 
+  model 
+   - Then feed new noise vectors into the generator to get different images
+![Geneerator single class](./images/Generator_single_class.png)
+- More common cats will be more common in the distribution space than rare cats
 
 
+### BCE Cost Function
+- BCE == _Binary Cross Entropy_ function
+![BCE Cost Function](./images/BCE_cost_function.png)
+   - _m_ - number of examples in the training batrch (mini-batch)
+   - _h_ - predictions made by the model
+   - _y_ - labels for the training data (_true_ labels for whether something is real or fake)
+   - _x_ - features passed through in a prediction
+   - $\theta$ - are the parameters of whatever is computing a production, probably the discriminator
+
+- First term of the cost function
+   ![BCE First Term](./images/BCE_first_term.png)
+
+- Second term of the cost function
+   ![BCE Second Term](./images/BCE_second_term.png)
+
+- Negative sign at the beginning of the equation ensures the cost is always >= 0
+
+- Each term of the loss function represents a label (real/1, or fake/0)
+   ![Loss function](./images/Loss_function.png)
 
