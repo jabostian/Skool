@@ -129,4 +129,40 @@
 
 - Each term of the loss function represents a label (real/1, or fake/0)
    ![Loss function](./images/Loss_function.png)
+   - Function value is close to zero when the label and prediction are similar
+   - Function value approaches infinity when the label and prediction are different
+- BCE loss calculation is performed across a mini-batch of several examples and the
+  total loss is averaged over the batches
 
+### Putting it All Together
+![Generator vs Discriminator](./images/Generator_vs_discriminator.png)
+
+- Training the discriminator
+   ![Discriminator training](./images/Distriminator_training.png)
+   - Note: only the discriminator is updated
+
+- Training the generator
+   ![Generator training](./images/Generator_training.png)
+   - Note: only the generator is updated
+
+- One model / component is trained while the other is held constant
+   - Both models should be trained to similar levels (train together)
+      - If discriminator is highly trained, will predict fakes with 100% accuracy, generator has no
+        way to improve
+      - If generator is more highly trained, discriminator will think that all generated images are
+        100% real
+- Discriminator's job is much easier than the generator
+   - Trying to tell fake from real, not model the entire image space
+- Common problem is when discriminator learns to quickly
+   - Says all fakes are 100% fake.  Not helpful for the generator to learn
+
+### Intro to PyTorch
+- Pytorch - developed by Facebook
+![PyTorch vs TensorFlow](./images/PyTorch_vs_TensorFlow.png)
+- With TF 2.0, eager execution makes TF more like dynamic computation
+- Eash to move between frameworks, expecially in the TF -> PyTorch direction
+- Defining a model in PyTorch
+   ![Define a Pytorch model](./images/PyTorch_define_model.png)
+- Training models in PyTorch   
+   ![Train a Pytorch model](./images/PyTorch_train_model.png)
+   
