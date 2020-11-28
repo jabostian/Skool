@@ -138,7 +138,7 @@
 ![Generator vs Discriminator](./images/Generator_vs_discriminator.png)
 
 - Training the discriminator
-   ![Discriminator training](./images/Distriminator_training.png)
+   ![Discriminator training](./images/Discriminator_training.png)
    - Note: only the discriminator is updated
 
 - Training the generator
@@ -167,5 +167,7 @@
    ![Train a Pytorch model](./images/PyTorch_train_model.png)
 
 ### Reference material
+- Tensor definition
+   - [https://en.wikipedia.org/wiki/Tensor](https://en.wikipedia.org/wiki/Tensor)
 - Pytorch Documentation 
    - [https://pytorch.org/docs/stable/index.html](https://pytorch.org/docs/stable/index.html)
