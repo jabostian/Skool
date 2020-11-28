@@ -165,4 +165,7 @@
    ![Define a Pytorch model](./images/PyTorch_define_model.png)
 - Training models in PyTorch   
    ![Train a Pytorch model](./images/PyTorch_train_model.png)
-   
+
+### Reference material
+- Pytorch Documentation 
+   - [https://pytorch.org/docs/stable/index.html](https://pytorch.org/docs/stable/index.html)
