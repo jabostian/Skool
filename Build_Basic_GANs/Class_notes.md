@@ -77,7 +77,7 @@
          - &Theta; - weights for the nodes of the NN (a.k.a. parameters)
             - Changes over time during learning
             - Trying to map Features (X) to Labels(Y)
-      - Predictions are y<sup>^</sup>_, because they are guesses, not the real labels (Y) for the
+      - Predictions are y<sup>^</sup>, because they are guesses, not the real labels (Y) for the
         feature set
       - Goal: minimize the difference between _Y_ and y<sup>^</sup>.
       - Cost function indicates how close _Y_ and y<sup>^</sup> are
@@ -160,7 +160,7 @@
 - Pytorch - developed by Facebook
 ![PyTorch vs TensorFlow](./images/PyTorch_vs_TensorFlow.png)
 - With TF 2.0, eager execution makes TF more like dynamic computation
-- Eash to move between frameworks, expecially in the TF -> PyTorch direction
+- Easy to move between frameworks, expecially in the TF -> PyTorch direction
 - Defining a model in PyTorch
    ![Define a Pytorch model](./images/PyTorch_define_model.png)
 - Training models in PyTorch   
