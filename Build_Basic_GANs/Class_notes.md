@@ -74,12 +74,12 @@
    - Training a classifier
       - 2 inputs:
          - Feature vector (X)
-         - $\theta$ - weights for the nodes of the NN (a.k.a. parameters)
+         - &Theta; - weights for the nodes of the NN (a.k.a. parameters)
             - Changes over time during learning
             - Trying to map Features (X) to Labels(Y)
       - Predictions are _yHat_, becaue they are guesses, not the real labels (Y) for the
         feature set
-      - Goal: minimize the difference between _Y_ and _yHat_
+      - Goal: minimize the difference between _Y_ and y<sup>^</sup>.
       - Cost function indicates how close _Y_ and _yHat_ are
       - Update the parameters (theta) according to the _gradient_ of the cost function
          - _gradient_ indicates the direction in which $\theta$ needs to move
